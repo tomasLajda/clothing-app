@@ -14,7 +14,7 @@ export function* fetchCategoriesAsync() {
     const categoriesArray = yield call(getCategoriesAndDocuments, 'categories');
     yield put(fetchCategoriesSuccess(categoriesArray));
   } catch (error) {
-    yield put(fetchCategoriesSuccess(error));
+    yield put(fetchCategoriesFailed(error));
   }
 }
 
